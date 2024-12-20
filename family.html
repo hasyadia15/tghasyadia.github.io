@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasyadia's personal website</title>
+</head>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+
+    .video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; 
+        overflow: hidden;
+    }
+    
+    .video-background video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+    
+}
+
+
+header {
+    background-color: #b8d4d8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbar .brand {
+    font-size: 2rem;
+    font-weight: 50;
+    color:#dfaeca;
+    text-shadow: 1px 1px #b84491;
+    transition: 0.3s;
+    font-family: Brush Script MT;
+    display: inline-block;
+    white-space: nowrap;
+    animation: moveText 10s linear infinite;  display: inline-block;
+  
+   
+}
+@keyframes moveText {
+    0% {
+        transform: translateX(-100%); 
+    }
+    80% {
+        transform: translateX(20%); 
+    }
+    100% {
+        transform: translateX(20%); 
+    }
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #faf9f9;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color:  #db51ad;
+}
+
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.hamburger div {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+.h1{
+    color: #b84491;
+}
+
+.family-tree {
+    display: inline-block;
+    margin: 20px auto;
+font-family: Candara;
+color: #b84491;
+text-shadow: 1px 1px #dbe7eb;
+
+}
+.box {
+    display: inline-block;
+    border: 2px solid #4d7e8f;
+    width: 120px;
+    height: 160px;
+    margin: 10px;
+    text-align: center;
+    background-color: #b8d4d8;
+    border-radius: 8px;
+}
+.box img {
+    width: 100px;
+    height: 85px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 5px;
+    background-color: #d9d9d9;
+}
+.connector {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+.horizontal-line {
+    height: 2px;
+    background-color: #000;
+    width: 80%;
+    margin: 0 auto;
+}
+.vertical-line {
+    width: 2px;
+    height: 40px;
+    background-color: #000;
+    margin: 0 auto;
+}
+
+.family-photo {
+    margin-top: 20px;
+}
+.family-photo img {
+    max-width: 500px;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #b8d4d8;
+    color: #db51ad;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+} 
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: #332323;
+        top: 50px;
+        right: 20px;
+        width: 200px;
+        padding: 10px;
+    }
+}
+
+</style>
+
+    <body>
+     
+        <div class="video-background">
+            <video autoplay muted loop id="bg-video">
+                <source src="coll2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+   
+    <header>
+        <nav class="navbar">
+            <div class="brand moving-text">&#9733 Welcome to my personal Website &#9733</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="edu.html">Education</a></li>
+                <li><a href="family.html" class="active">Family</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+          
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+  <div class="h1">
+    <h1>My Family Members</h1>
+</div>
+    <div class="family-tree">
+   
+        <div class="connector">
+            <div class="box">
+                <img src="images/abi1.jpg" alt="Placeholder">
+                <div>Tg Hazman Raja Hassan<br>(Father)</div>
+            </div>
+            <div class="box">
+                <img src="images/mum.jpg" alt="Placeholder">
+                <div>Rosmalisa Abdullah<br>(Mother)</div>
+            </div>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="horizontal-line"></div>
+        
+        
+        
+        
+        <div class="connector">
+           
+            <div class="box">
+                <img src="images/mil.png" alt="Placeholder">
+                <div>Tg Hasyamilia<br> Tg Hazman<br>(Twin Sister)</div>
+            </div>
+            <div class="box">
+                <img src="images/dia.png" alt="Placeholder">
+                <div>Tg Hasyadia<br> Tg Hazman<br>(Me)</div>
+            </div>
+            <div class="box">
+                <img src="images/yiyie1.png".jpg" alt="Placeholder">
+                <div>Tg Hasyri <br>Tg Hazman<br>(Brother)</div>
+            </div>
+            <div class="box">
+                <img src="images/yaya.png" alt="Placeholder">
+                <div>Tg Hasyaumyra<br> Tg Hazman<br>(Sister)</div>
+            </div>
+            <div class="box">
+                <img src="images/didid.jpg" alt="Placeholder">
+                <div>Tg Hadeed<br> Tg Hazman<br>(Brother)</div>
+            </div>
+            <div class="box">
+                <img src="images/mimim.jpg" alt="Placeholder">
+                <div>Tg Hamim<br> Tg Hazman<br>(Brother)</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="family-photo">
+        <img src="images/Fam.jpg" alt="Family Photo">
+    </div>
+
+    <footer id="contact">
+        <p>&copy; 2024 Tengku Hasyadia Zahira. All Rights Reserved.</p>
+    </footer>
+
+   
+</body>
+</html>

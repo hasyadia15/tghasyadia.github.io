@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasyadia's personal website</title>
+</head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+
+}
+
+
+
+header {
+    background-color: #b8d4d8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbar .brand {
+    font-size: 2rem;
+    font-weight: 50;
+    color:#dfaeca;
+    text-shadow: 1px 1px #b84491;
+    transition: 0.3s;
+    font-family: Brush Script MT;
+    display: inline-block;
+    white-space: nowrap;
+    animation: moveText 10s linear infinite;  display: inline-block;
+    white-space: nowrap;
+    animation: moveText 10s linear infinite; 
+   
+}
+@keyframes moveText {
+    0% {
+        transform: translateX(-100%); 
+    }
+    80% {
+        transform: translateX(20%); 
+    }
+    100% {
+        transform: translateX(20%); 
+    }
+}
+   
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #faf9f9;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #db51ad;
+}
+
+
+
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+
+.slide-container {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image: url('images/opt2.jpeg');
+}
+
+.image-slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: 1s ease-in-out;
+    width: 100%;
+    height: 600px;
+    
+}
+
+.slides-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+    
+}
+
+.img {
+    position: relative;
+    width: 240px;
+    height: 370px;
+    transition: 0.5s;
+}
+
+.button {
+    position: absolute;
+    width: 240px;
+    height: 370px;
+    transition: 0.5s;
+    
+
+}
+
+#slider-span1:target ~ .image-slider #img1,
+#slider-span2:target ~ .image-slider #img2,
+#slider-span3:target ~ .image-slider #img3,
+#slider-span4:target ~ .image-slider #img4,
+#slider-span5:target ~ .image-slider #img5 
+{
+    width: 380px;
+    height: 585px;
+    background-color: transparent;
+}
+
+#slider-span1:target ~ .image-slider {
+    left: 20%;
+}
+
+#slider-span2:target ~ .image-slider {
+    left: 0%;
+}
+
+#slider-span3:target ~ .image-slider {
+    left: -20%;
+}
+
+#slider-span4:target ~ .image-slider {
+    left: -40%;
+}
+
+#slider-span5:target ~ .image-slider {
+    left: -60%;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #b8d4d8;
+    color: #db51ad;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+    }
+    
+    .hamburger {
+        display: block; 
+    }
+}
+</style>
+<body>
+     
+
+    <header>
+        <nav class="navbar">
+            <div class="brand moving-text">&#9733 Welcome to my personal Website &#9733</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="experience.html" >Experience</a></li>
+                <li><a href="edu.html">Education</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+            </ul>
+          
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+   
+    <div class="slide-container">
+        <span class="slider-span" id="slider-span1"></span>
+        <span class="slider-span" id="slider-span2"></span>
+        <span class="slider-span" id="slider-span3"></span>
+        <span class="slider-span" id="slider-span4"></span>
+        <span class="slider-span" id="slider-span5"></span>
+
+        <div class="image-slider">
+            <div class="slides-div">
+                <img src="images/me1.jpg" alt="Image 1" class="img" id="img1">
+                <a href="#slider-span1" class="button" id="button-1"></a>
+            </div>
+            <div class="slides-div">
+                <img src="images/nala.jpg" alt="Image 2" class="img" id="img2">
+                <a href="#slider-span2" class="button" id="button-2"></a>
+            </div>
+            <div class="slides-div">
+                <img src="images/twin3.jpg" alt="Image 3" class="img" id="img3">
+                <a href="#slider-span3" class="button" id="button-3"></a>
+            </div>
+            <div class="slides-div">
+                <img src="images/pizza.jpg" alt="Image 4" class="img" id="img4">
+                <a href="#slider-span4" class="button" id="button-4"></a>
+            </div>
+            <div class="slides-div">
+                <img src="images/friend.jpg" alt="Image 5" class="img" id="img5">
+                <a href="#slider-span5" class="button" id="button-5"></a>
+            </div>
+        </div>
+    </div>
+    <footer id="contact">
+        <p>&copy; 2024 Tengku Hasyadia Zahira. All Rights Reserved.</p>
+    </footer>
+
+
+</body>
+</html>
+

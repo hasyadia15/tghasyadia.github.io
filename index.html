@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasyadia's personal website</title>
+    
+</head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    .video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
+    
+    .video-background video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+}
+
+
+header {
+    background-color: #b8d4d8;
+    box-shadow: 0 4px 6px rgba(172, 185, 140, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbar .brand {
+    font-size: 2rem;
+    font-weight: 50;
+    color:#dfaeca;
+    text-shadow: 1px 1px #b84491;
+    transition: 0.3s;
+    font-family: Brush Script MT;
+     display: inline-block;
+    white-space: nowrap;
+    animation: moveText 10s linear infinite;  display: inline-block;
+  
+}
+@keyframes moveText {
+    0% {
+        transform: translateX(-100%); 
+    }
+    80% {
+        transform: translateX(20%); 
+    }
+    100% {
+        transform: translateX(20%); 
+    }
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #faf9f9;
+    font-weight: 600;
+    transition:0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #db51ad;
+}
+
+
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #f5f1f1;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    background: white
+    color #702d2d;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.hero-content  {
+    margin-bottom: 1.6rem;
+    color: #578ab3;
+font-size: 1.45rem;
+font-weight:10;
+
+}
+    
+
+
+.hero-content h2 {
+    color: #db51ad;
+    text-shadow:2px 2px #dfaeca;
+    transition: 0.3s;
+    font-size: 2.5rem;
+    font-weight: 1000;
+  
+}
+
+
+.hero-content p{
+    margin-bottom: 1.5rem;
+    color: #1a1414;
+font-size: 1.45rem;
+font-weight:10;
+}
+
+.images {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 60;
+    height: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+footer {
+    margin-top: auto;
+    background-color: #b8d4d8;
+    color: #db51ad;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+    }
+    
+    .hamburger {
+        display: block; 
+    }
+}
+
+</style>
+<body>
+       
+        <div class="video-background">
+            <video autoplay muted loop id="bg-video">
+                <source src="bg1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    
+    <header>
+        <nav class="navbar">
+            <div class="brand"></div>
+            <div class="brand moving-text">&#9733 Welcome to my personal Website &#9733</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="edu.html">Education</a></li>
+                <li><a href="family.html">family</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+           
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    
+    <section class="hero">
+        <div class="hero-content">
+            <p>Hello, I’m <br><h2>Syadia</h2> 
+            <p> Greetings from my personal website, where i share everything about myself, my education, family and more.</p>
+           
+        </div>
+        <div class="images">
+            <img src= "images/syadia.jpg" alt="profile">
+
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2024 Tengku Hasyadia Zahira. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

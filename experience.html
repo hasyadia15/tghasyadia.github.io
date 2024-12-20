@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasyadia's personal website</title>
+ <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+
+header {
+    background-color:#b8d4d8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbar .brand {
+    font-size: 2rem;
+    font-weight: 50;
+    color:#dfaeca;
+    text-shadow: 1px 1px #b84491;
+    transition: 0.3s;
+    font-family: Brush Script MT;
+    display: inline-block;
+    white-space: nowrap;
+    animation: moveText 10s linear infinite;  display: inline-block;
+    
+   
+}
+@keyframes moveText {
+    0% {
+        transform: translateX(-100%); 
+    }
+    80% {
+        transform: translateX(20%); 
+    }
+    100% {
+        transform: translateX(20%); 
+    }
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #faf9f9;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color:#db51ad;
+}
+
+
+
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+
+body {
+    background-image: url('images/opt2.jpeg');
+    color: #333;
+    line-height: 1.6;
+}
+
+.experience-section {
+    padding: 50px 10%;
+}
+
+
+.experience-header {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.experience-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #db51ad
+}
+
+.experience-header p {
+    max-width: 500px;
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+
+.experience-timeline {
+    position: relative;
+    border-left: 2px solid #db51ad;
+    padding-left: 30px;
+}
+
+.experience-item {
+    margin-bottom: 40px;
+    position: relative;
+
+}
+
+.timeline-date {
+    color: #4d7e8f;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.timeline-content h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.timeline-content h3 span {
+    color:#db51ad;
+}
+
+.timeline-content p {
+    font-size:#db51ad 1rem;
+    color: #333;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.timeline-dot{
+    position: absolute;
+    top: 5px;
+    left: -38px;
+    width: 15px;
+    height: 15px;
+    background-color: #dfaeca;
+    border-radius: 50%;
+}
+
+
+footer {
+    background-color: #b8d4d8;
+    color: #db51ad;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+    }
+    
+    .hamburger {
+        display: block; /* Show hamburger menu on small screens */
+    }
+} 
+
+ </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="brand moving-text">&#9733 Welcome to my personal Website &#9733</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html" >About Me</a></li>
+                <li><a href="experience.html"class="active">Experience</a></li>
+                <li><a href="edu.html">Education</a></li>
+                <li><a href="family">Family</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    
+    <body>
+     
+        <section class="experience-section">
+          
+            <div class="experience-header">
+                <h2>My Experience</h2>
+                <p> I'm always ready to learn and gained a lot more experience by working  in different type of work.</p>
+            </div>
+    
+        
+            <div class="experience-timeline">
+             
+                <div class="experience-item">
+                    <div class="timeline-date">  July - September 2024</div>
+                    <div class="timeline-content">
+                        <h3>Intern at <span>Perpustakaan Tengku Anis Campus Kota Bharu</span></h3>
+                        <p>
+                            As a Intern at Perpustakaan Tengku Anis Campus Kota Bharu , I started my journey by working at all unit in the library. There are many things that I learn during my internship such as classification process, RFID and circulation process.
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+    
+          
+                <div class="experience-item">
+                    <div class="timeline-date">Feb - july 2021</div>
+                    <div class="timeline-content">
+                        <h3>Admin at <span> Hasyaumyra Hijab</span></h3>
+                       
+                        <ul>
+<li>Maintained customer satisfaction with quick and professional handling of product return</li>
+<li>Assisted customers by finding items based on colour or design that suit with their expectations and preference</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+               
+                <div class="experience-item">
+                    <div class="timeline-date">May 2018 - Oct 2018</div>
+                    <div class="timeline-content">
+                        <h3>Store Assosiate at <span> 7 Eleven</span></h3>
+                       
+                        <ul>
+<li>assisted customers by finding items quickly to boost store  satisfaction rates</li>
+<li>Posses ability to serve customer</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact">
+            <p>&copy; 2024 Tengku Hasyadia Zahira. All Rights Reserved.</p>
+        </footer>
+
+    </body>
+    </html>
+    
